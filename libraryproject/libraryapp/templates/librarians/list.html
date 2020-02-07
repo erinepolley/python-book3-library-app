@@ -6,15 +6,11 @@
     <title>Library</title>
   </head>
   <body>
-    <h1>Books</h1>
+    <h1>Librarians</h1>
 
     <ol>
-    {% for book in all_books %}
-        <li>
-            {{ book.title }}
-            by {{book.author}}
-            published in {{book.year_published}}
-        </li>
+    {% for librarian in all_librarians %}
+        <li>{{ librarian.first_name }} {{ librarian.last_name }}</li>
     {% endfor %}
     </ol>
   </body>

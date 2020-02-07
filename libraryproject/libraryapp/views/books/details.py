@@ -27,7 +27,7 @@ def get_book(book_id):
 
         return db_cursor.fetchone()
 
-@login_required
+# @login_required
 def book_details(request, book_id):
     if request.method == 'GET':
         book = get_book(book_id)

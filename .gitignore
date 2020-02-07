@@ -4,3 +4,9 @@ libraryproject/libraryapp/views/books/__pycache__
 libraryproject/libraryapp/views/__pycache__
 libraryproject/libraryapp/models/__pycache__
 libraryproject/libraryapp/__pycache__
+libraryapp/__pycache__/urls.cpython-38.pyc
+libraryproject/libraryapp/views/books/__pycache__/details.cpython-38.pyc
+libraryproject/libraryapp/views/books/__pycache__/form.cpython-38.pyc
+libraryproject/libraryapp/views/books/__pycache__/list.cpython-38.pyc
+libraryproject/libraryapp/__pycache__/urls.cpython-38.pyc
+
