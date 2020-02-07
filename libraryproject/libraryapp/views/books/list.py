@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 # from views import Connection
 # from views.connection import Connection
 
-@login_required
+# @login_required
 def book_list(request):
     if request.method == 'GET':
         with sqlite3.connect(Connection.db_path) as conn:
@@ -19,7 +19,7 @@ def book_list(request):
                 b.title,
                 b.isbn,
                 b.author,
-                b.year_published,
+                b.year,
                 b.librarian_id,
                 b.location_id
             from libraryapp_book b
@@ -34,12 +34,12 @@ def book_list(request):
                 book.title = row['title']
                 book.isbn = row['isbn']
                 book.author = row['author']
-                book.year_published = row['year_published']
+                book.year = row['year']
                 book.librarian_id = row['librarian_id']
                 book.location_id = row['location_id']
 
                 all_books.append(book)
-
+#all books is the list of books objects that the view generates.
         template = 'books/list.html'
         context = {
             'all_books': all_books

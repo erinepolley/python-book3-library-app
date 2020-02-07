@@ -1,1 +1,6 @@
 libraryenv/
+libraryproject/libraryproject/__pycache__
+libraryproject/libraryapp/views/books/__pycache__
+libraryproject/libraryapp/views/__pycache__
+libraryproject/libraryapp/models/__pycache__
+libraryproject/libraryapp/__pycache__

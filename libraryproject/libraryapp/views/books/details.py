@@ -3,13 +3,13 @@ from django.urls import reverse
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from libraryapp.models import Book, Library
-from libraryapp.models import model_factory
+# from libraryapp.models import model_factory
 from ..connection import Connection
 
 
 def get_book(book_id):
     with sqlite3.connect(Connection.db_path) as conn:
-        conn.row_factory = model_factory(Book)
+        # conn.row_factory = model_factory(Book)
         db_cursor = conn.cursor()
 
         db_cursor.execute("""
