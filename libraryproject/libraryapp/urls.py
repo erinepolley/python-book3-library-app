@@ -10,7 +10,7 @@ app_name = "libraryapp"
 #so when you change the name of a route, don't have to change the route path wherever it's referenced.
 
 urlpatterns = [
-    path('', book_list, name='home'),
+    path('', home, name='home'),
     path('books/', book_list, name='books'),
     #already built into Python, don't have to build them, just using them
     path('accounts/', include('django.contrib.auth.urls')), 
