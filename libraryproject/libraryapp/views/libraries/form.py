@@ -5,33 +5,32 @@ from libraryapp.models import Book
 from libraryapp.models import Library
 from libraryapp.models import model_factory
 from ..connection import Connection
-from ..libraries.form import library_form, get_libraries
 
-def get_books():
+
+def get_libraries():
     with sqlite3.connect(Connection.db_path) as conn:
-        conn.row_factory = model_factory(Book)
+        conn.row_factory = model_factory(Library)
         db_cursor = conn.cursor()
 
         db_cursor.execute("""
-           select  b.id,
-            b.title,
-            b.isbn,
-            b.author,
-            b.year_published,
-            b.librarian_id,
-            b.location_id
-        FROM libraryapp_book b
+        select
+            l.id,
+            l.title,
+            l.address
+        from libraryapp_library l
         """)
 
         return db_cursor.fetchall()
 
 @login_required
-def book_form(request):
+def library_form(request):
     if request.method == 'GET':
         libraries = get_libraries()
-        template = 'books/form.html'
+        template = 'libraries/form.html'
         context = {
             'all_libraries': libraries
         }
 
         return render(request, template, context)
+    
+   

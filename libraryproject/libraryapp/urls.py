@@ -12,12 +12,16 @@ app_name = "libraryapp"
 urlpatterns = [
     path('', home, name='home'),
     path('books/', book_list, name='books'),
-    #already built into Python, don't have to build them, just using them
-    path('accounts/', include('django.contrib.auth.urls')), 
-    # path('logout/', logout_user, name='logout'),
+    #already built into Python, don't have to build them, just using themn
+    path('accounts/', include('django.contrib.auth.urls')),
+
     path('book/form', book_form, name='book_form'),
     path('books/<int:book_id>/', book_details, name='book'),
+
     path('librarians/', list_librarians, name='librarians'),
+
+    path('libraries/form', library_form, name='library_form'),
     path('libraries/', list_libraries, name='libraries'),
+
     path('logout/', logout_user, name='logout'),  
 ]

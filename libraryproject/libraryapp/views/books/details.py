@@ -18,7 +18,7 @@ def get_book(book_id):
             b.title,
             b.isbn,
             b.author,
-            b.year_published,
+            b.year,
             b.librarian_id,
             b.location_id
         FROM libraryapp_book b

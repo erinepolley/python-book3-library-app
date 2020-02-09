@@ -7,7 +7,7 @@
     <title>Bangazon</title>
   </head>
   <body>
-    <h1>Inventory Book</h1>
+    <h1>Add Book to Inventory</h1>
 
 
     <form action="{% url 'libraryapp:books' %}" method="post">
@@ -21,8 +21,8 @@
           <input id="author" type="text" name="author">
       </fieldset>
       <fieldset>
-          <label for="year_published">Year of publication: </label>
-          <input id="year_published" type="number" name="year_published">
+          <label for="year">Year of publication: </label>
+          <input id="year" type="number" name="year_published">
       </fieldset>
       <fieldset>
           <label for="isbn">ISBN: </label>
