@@ -1,5 +1,7 @@
 import sqlite3
 from django.shortcuts import render
+from django.urls import reverse
+from django.shortcuts import redirect
 from libraryapp.models import Library
 from ..connection import Connection
 from django.contrib.auth.decorators import login_required
@@ -46,7 +48,7 @@ def list_libraries(request):
             db_cursor = conn.cursor()
 
             db_cursor.execute("""
-            INSERT INTO libraryapp_book
+            INSERT INTO libraryapp_library
             (
                 title, address
             )
