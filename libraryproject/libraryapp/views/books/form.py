@@ -22,7 +22,7 @@ def get_libraries():
 
         return db_cursor.fetchall()
 
-# @login_required
+@login_required
 def book_form(request):
     if request.method == 'GET':
         libraries = get_libraries()
