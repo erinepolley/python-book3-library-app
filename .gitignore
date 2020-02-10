@@ -9,4 +9,4 @@ libraryproject/libraryapp/views/books/__pycache__/details.cpython-38.pyc
 libraryproject/libraryapp/views/books/__pycache__/form.cpython-38.pyc
 libraryproject/libraryapp/views/books/__pycache__/list.cpython-38.pyc
 libraryproject/libraryapp/__pycache__/urls.cpython-38.pyc
-
+libraryapp/views/connection.py
