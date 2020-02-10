@@ -44,10 +44,12 @@ def book_list(request):
             #     all_books.append(book)
 #all books is the list of books objects that the view generates.
         template = 'books/list.html'
+        #can call the all_books on the left whatever you want.
+        #all_books on the right needs to be the same as in the template. Our template is expecting a dictionary as all_books. So it needs to match and be a dictionary.
         context = {
             'all_books': all_books
         }
-
+#request, template, and context are naming conventions.
         return render(request, template, context)
 
     elif request.method == 'POST':
