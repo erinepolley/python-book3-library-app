@@ -12,7 +12,7 @@
     {% for book in all_books %}
 <li>
     <a href="{% url 'libraryapp:book' book.id %}"> {{ book.title }} </a>
-    by {{book.author}} published in {{book.year_published}}
+    by {{book.author}} published in {{book.year}}
 </li>
     {% endfor %}
     </ol>
