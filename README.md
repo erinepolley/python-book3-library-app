@@ -11,7 +11,6 @@ Technologies used: Python, SQL, SQLite, Django, DBeaver
 `python manage.py migrate`
 4. Create superuser `python manage.py createsuperuser`
 5. Populate the database: `python manage.py loaddata computers`
-<br>
 `python manage.py loaddata users`
 6. `python manage.py runserver`
 
