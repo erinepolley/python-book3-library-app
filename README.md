@@ -7,7 +7,12 @@ Technologies used: Python, SQL, SQLite, Django, DBeaver
 
 1. `git clone git@github.com:erinepolley/python-book3-library-app.git`
 2. Install dependencies: `pip install -r requirements.txt`
-3. Build your database: `python manage.py makemigrations hrapp
-python manage.py migrate`
+3. Build your database: `python manage.py makemigrations hrapp`
+<br>
+`python manage.py migrate`
+4. Create superuser `python manage.py createsuperuser`
+5. Populate the database: `python manage.py loaddata computers`
+<br>
+`python manage.py loaddata users`
 4. `python manage.py runserver`
 
